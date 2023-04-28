@@ -1,7 +1,8 @@
 package com.driver.services;
 
-import com.driver.model.Driver;
+import org.springframework.stereotype.Service;
 
+@Service
 public interface DriverService {
 
 		public void register(String mobile, String password);
