@@ -1,7 +1,6 @@
 package com.driver.controllers;
 
-import com.driver.DTO.Response.CustomerResponse;
-import com.driver.DTO.Response.DriverResponse;
+
 import com.driver.model.Admin;
 import com.driver.model.Customer;
 import com.driver.model.Driver;
