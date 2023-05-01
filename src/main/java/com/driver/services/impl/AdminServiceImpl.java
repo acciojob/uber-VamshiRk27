@@ -3,8 +3,7 @@ package com.driver.services.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.driver.DTO.Response.CustomerResponse;
-import com.driver.DTO.Response.DriverResponse;
+
 import com.driver.services.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -52,30 +51,16 @@ public class AdminServiceImpl implements AdminService {
 	}
 
 	@Override
-	public List<DriverResponse> getListOfDrivers() {
+	public List<Driver> getListOfDrivers() {
 		//Find the list of all drivers
 		List<Driver> drivers=driverRepository1.findAll();
-		List<DriverResponse> responseList=new ArrayList<>();
-		for(Driver driver:drivers){
-			DriverResponse response=new DriverResponse();
-			response.setDriverId(driver.getDriverId());
-			response.setCabId(driver.getCab().getId());
-			responseList.add(response);
-		}
-		return responseList;
+		return drivers;
 	}
 
 	@Override
-	public List<CustomerResponse> getListOfCustomers() {
+	public List<Customer> getListOfCustomers() {
 		//Find the list of all customers
 		List<Customer> customers=customerRepository1.findAll();
-		List<CustomerResponse> responseList=new ArrayList<>();
-		for(Customer customer :customers){
-			CustomerResponse response=new CustomerResponse();
-			response.setCustomerId(customer.getCustomerId());
-			response.setMobile(customer.getMobile());
-			responseList.add(response);
-		}
-		return responseList;
+		return customers;
 	}
 }

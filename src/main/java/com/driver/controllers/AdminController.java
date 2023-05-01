@@ -37,14 +37,14 @@ public class AdminController {
 	}
 
 	@GetMapping("/listOfCustomers")
-	public List<CustomerResponse> listOfCustomers() {
-		List<CustomerResponse> listOfCustomers=adminService.getListOfCustomers();
+	public List<Customer> listOfCustomers() {
+		List<Customer> listOfCustomers=adminService.getListOfCustomers();
 		return listOfCustomers;
 	}
 
 	@GetMapping("/listOfDrivers")
-	public List<DriverResponse> listOfDrivers() {
-		List<DriverResponse> listOfDrivers=adminService.getListOfDrivers();
+	public List<Driver> listOfDrivers() {
+		List<Driver> listOfDrivers=adminService.getListOfDrivers();
 		return listOfDrivers;
 	}
 }
